@@ -1,20 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './MovieCard.css';
 
-const MovieCard = (props) => {
+const MovieCard = ({ movie }) => {
   return (
-    <div className='movie'>
-      <div>
-        <p>{props.movie.Year}</p>
+    <div className="movie">
+    <Link to={`/movie/${movie.imdbID}`} >
+      <img src={movie.Poster} alt={movie.Title} />
+      <div className="movie-info">
+        <h3>{movie.Title}</h3>
       </div>
-      <div>
-        <img src={props.movie.Poster !== 'N/A' ? props.movie.Poster : 'https://via.placeholder.com/400'} alt="" />
-      </div>
-      <div>
-        <span>{props.movie.Type}</span>
-        <h3>{props.movie.Title}</h3>
-      </div>
+    </Link>
     </div>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;
