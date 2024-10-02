@@ -8,32 +8,32 @@
     border: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
-    text-decoration: none; /* Prevents link underline */
-    color: inherit; /* Inherit color from parent */
+    text-decoration: none; 
+    color: inherit; 
   }
   
   .movie img {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Ensures the image covers the div without distortion */
+    object-fit: cover; 
   }
   
   .movie .movie-info {
     z-index: 2;
     width: 100%;
-    background-color: #F4CFB1; /* Background color for the movie name */
+    background-color: #F4CFB1; 
     padding: 16px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    text-align: center; /* Center the text */
+    text-align: center;
   }
   
   .movie .movie-info h3 {
-    margin: 0; /* Remove default margin */
+    margin: 0;
     font-family: "Roboto Slab", serif;
-    color: #212426; /* Text color for the movie name */
+    color: #212426; 
   }
   
   .movie:hover {

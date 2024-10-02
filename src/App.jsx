@@ -10,9 +10,9 @@ function App() {
   const [search, setSearch] = useState("idiots");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
+  const apiKey = import.meta.env.VITE_API_KEY;
   
-  // d3919209
-  const API_URL = "https://www.omdbapi.com/?apikey=d3919209";
+  const API_URL = `https://www.omdbapi.com/?apikey=${apiKey}`;
   const navigate = useNavigate();
 
   const searchMovies = async (title) => {
@@ -30,7 +30,6 @@ function App() {
    
 
   return (
-    // react fragment - <> </> if more than one elements...then u need to wrap them around the react fragment
     <div className="app">
       <h1>All time Popular Movies</h1>
       <div className="search">

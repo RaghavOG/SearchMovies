@@ -22,14 +22,14 @@ body {
 }
 
 .movie-poster {
-  width: 50%; /* Set the width to 50% */
-  max-width: 400px; /* Set a max-width for larger screens */
+  width: 50%;
+  max-width: 400px; 
   border-radius: 12px;
 }
 
 .movie-info {
-  width: 50%; /* Set the width to 50% */
-  padding-left: 2rem; /* Space between poster and details */
+  width: 50%; 
+  padding-left: 2rem;
 }
 
 .movie-info h1 {
@@ -62,7 +62,7 @@ body {
 
 .movie-plot {
   margin-top: 2rem;
-  font-size: 1.2rem; /* Style for plot text */
+  font-size: 1.2rem; 
 }
 
 @media screen and (max-width: 600px) {
@@ -71,14 +71,14 @@ body {
   }
 
   .movie-poster {
-    max-width: 100%; /* Adjust to full width on smaller screens */
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 1rem; /* Space below poster for mobile */
+    max-width: 100%; 
+    width: 100%; 
+    margin-bottom: 1rem; 
   }
 
   .movie-info {
-    width: 100%; /* Full width for mobile */
-    padding-left: 0; /* Remove padding for mobile */
+    width: 100%; 
+    padding-left: 0; 
   }
 
   .movie-info h1 {
@@ -90,6 +90,6 @@ body {
   }
 
   .movie-plot {
-    font-size: 1rem; /* Adjust plot text for smaller screens */
+    font-size: 1rem; 
   }
 }

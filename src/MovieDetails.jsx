@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './MovieDetails.css'; // Import your CSS for styling
+import './MovieDetails.css';
 import Loading from './Loading';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,8 +9,9 @@ const MovieDetails = () => {
   const navigate = useNavigate(); 
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  const API_URL = "https://www.omdbapi.com/?apikey=d3919209"; // Your API URL
+  
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const API_URL = `https://www.omdbapi.com/?apikey=${apiKey}`;
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -37,11 +38,11 @@ const MovieDetails = () => {
       zIndex: 999,
     };
 
-    return <Loading style={loadingStyle} />; // Pass custom style
+    return <Loading style={loadingStyle} />; 
   }
 
   if (!movieDetails) {
-    return <div>No Movie Details Found</div>; // Handle case where no details are found
+    return <div>No Movie Details Found</div>; 
   }
 
   return (
