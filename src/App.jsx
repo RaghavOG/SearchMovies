@@ -7,12 +7,12 @@ import { useNavigate } from 'react-router-dom';
 import './App.css'
 
 function App() {
-  const [search, setSearch] = useState("idiots");
+  const [search, setSearch] = useState("");
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
-  const apiKey = import.meta.env.VITE_API_KEY;
   
-  const API_URL = `https://www.omdbapi.com/?apikey=${apiKey}`;
+  
+  const API_URL = 'https://www.omdbapi.com/?apikey=d3919209';
   const navigate = useNavigate();
 
   const searchMovies = async (title) => {

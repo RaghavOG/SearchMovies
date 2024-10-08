@@ -10,8 +10,7 @@ const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const [loading, setLoading] = useState(true);
   
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const API_URL = `https://www.omdbapi.com/?apikey=${apiKey}`;
+  const API_URL = 'https://www.omdbapi.com/?apikey=d3919209';
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -50,7 +49,7 @@ const MovieDetails = () => {
       <button className="back-button" onClick={() => navigate(-1)}>Back</button>
       <div className="movie-details">
         <div className="details-container">
-          <img className="movie-poster" src={movieDetails.Poster} alt={`${movieDetails.Title} Poster`} />
+          <img className="movie-poster" src={movieDetails.Poster !== 'N/A' ? movieDetails.Poster : 'https://via.placeholder.com/400'} alt={`${movieDetails.Title} Poster`} />
           <div className="movie-info">
             <h1>{movieDetails.Title}</h1>
             <p><strong>Year:</strong> {movieDetails.Year}</p>
